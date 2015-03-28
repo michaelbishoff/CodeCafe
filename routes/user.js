@@ -4,5 +4,7 @@
  */
 
 exports.list = function(req, res){
-    res.send({"message":"respond with a resource"});
+    res.send({"users":
+	      {"Michael", "Celeste", "Kenny", "Edwin", "Izzy"}
+	});
 };
