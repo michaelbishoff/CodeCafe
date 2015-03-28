@@ -8,7 +8,6 @@ git commit -m "I made some files"
 
 git push
 
-
 Get the new changes that someone else added:
 
 git pull
