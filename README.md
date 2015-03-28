@@ -1,5 +1,7 @@
 # Code Cafe
 
+git status
+
 To add code:
 
 git add file1.txt file2.txt ...
