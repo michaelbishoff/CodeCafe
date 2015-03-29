@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , registration = require('./routes/registration');
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
