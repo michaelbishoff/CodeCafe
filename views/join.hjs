@@ -66,7 +66,7 @@
         
     <tr align = "center">
         <td>
-       <a href="/views/index.hjs"><button class= "myLoginButton" type = "button" href="/views/index.hjs"> Enter Coffee Shop! </button></td>
+       <a href="/"><button class= "myLoginButton" type = "button" href="/views/index.hjs"> Enter Coffee Shop! </button></td>
         </td>
     
     </tr>
