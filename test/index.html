@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	
+	<table style="height:100">
+	<tr>
+	<style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+	</tr>
+	</table>
+	
+	</head>
+    <input type="button" value="save as text file" onclick="runPy();"/>
+	
+	<textarea id="m" class="one" rows="10" cols="50"></textarea>
+	<textarea id="n" class="two" rows="10" co	ls="50"></textarea>
+	
+	<body>
+	
+    
+	<ul id="messages"></ul>
+    <form action="" id="usrform">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+	
+	<!--SCRIPTS-------------------------------------------------------->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+	<!--SCRIPTS-------------------------------------------------------->
+		enableTab('m');
+		var socket = io();
+	
+		$('.one').on('keyup', function(event){
+        var key = String.fromCharCode(event.which);
+			if (!event.shiftKey) {
+				key = key.toLowerCase();
+			}
+			// DO NOT DELETE
+			//$('#n').val('');
+			var output = $('textarea#m').val();
+			socket.emit('backSpace',  output);
+		});
+		
+		//-------------CATCH keypress value from server here---------
+		socket.on('keyPress', function(msg) {
+			console.log(msg);
+			$('#m').append(msg);
+			$('#m').trigger('change');
+		
+			//document.getElementById("n").value = "";
+			
+			// replace with val()
+		});
+		
+		socket.on('backSpace', function(msg) {
+			console.log('backspace hit!!!');
+			$('#m').val(msg);
+			
+		});
+		
+		
+		// USED FOR CHAT FUNCTION!!! DONT DELETE
+		$('form').submit(function(){
+			socket.emit('chat message', $('#input').val());
+			$('#input').val('');
+			return false;
+		});
+		
+		socket.on('chat message', function(msg){
+			$('#messages').append($('<li>').text(msg));
+		});
+		
+			
+			<!--EDWINS CODE STARTS HERE-->
+		
+		
+		
+		function enableTab(id) {
+    var el = document.getElementById(id);
+    el.onkeydown = function(e) {
+        if (e.keyCode === 9) { // tab was pressed
+
+            // get caret position/selection
+            var val = this.value,
+                start = this.selectionStart,
+                end = this.selectionEnd;
+
+            // set textarea value to: text before caret + tab + text after caret
+            this.value = val.substring(0, start) + '\t' + val.substring(end);
+
+            // put caret at right position again
+            this.selectionStart = this.selectionEnd = start + 1;
+
+            // prevent the focus lose
+            return false;
+
+        }
+    };
+}
+
+
+
+	</script>
+	
+	<!--display key info-->
+	<!-- DEBUG ONLY
+	<h2>Javascript Capture</h2>
+	<h3>onkeydown - onkeyup</h3>
+	Key Pressed: <span id="keypress"></span>
+	<br />
+	Key Code: <span id="keycode"></span>
+	<p id="status">Keyboard Event Status</p>
+	-->
+	
+	</body>
+</html>
