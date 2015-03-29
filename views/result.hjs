@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link type='text/javascript' src='jquery.min.js' />
+  </head>
+  <body>
+    <h1 onclick="run()">{{ title }}</h1>
+    <p>{{ code }} </p>
+    <br/><p>{{ compileInfo }}</p>
+    <br/><p>{{ stdout }}</p>
+    <br/><p>{{ stderr }}</p>
+  </body>
+<script type="text/javascript" src="javascripts/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="javascripts/jquery-2.1.3.js"></scri\
+pt>
+  <script type='text/javascript'>
+function run() {
+// Create the post object. The id is the unique key in the DB
+//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id")\
+};
+
+    // Setup the ajax request
+    $.ajax({
+        url: "run", // where we want to submit the form to
+        data: {},
+//        dataType: 'json',
+        type: 'get',
+        success: function(result) {
+            if(!result) {
+                console.error("Failed ajax request");
+            }
+        }
+    });
+
+}
+  </script>
+</html>

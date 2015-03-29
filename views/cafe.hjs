@@ -113,7 +113,7 @@ function run() {
 
     // Setup the ajax request
     $.ajax({
-        url: "cafe", // where we want to submit the form to
+        url: "result", // where we want to submit the form to
         data: {"code": $('#m').val()},
         dataType: 'json',
         type: 'get',

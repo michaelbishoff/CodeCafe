@@ -8,6 +8,7 @@ var express = require('express')
   , routes = require('./routes')
   , join = require('./routes/join')
   , cafe = require('./routes/cafe')
+  , result = require('./routes/result')
   , path = require('path')
   , http = require('http').Server(app)
   , io = require('socket.io')(http);
@@ -39,6 +40,7 @@ app.get('/', routes.index);
 app.get('/join', join.index);
 app.get('/cafe', cafe.index);
 app.post('/cafe', cafe.post);
+app.get('/result', result.index);
 
 io.on('connection', function(socket) {
     console.log('a user connected');

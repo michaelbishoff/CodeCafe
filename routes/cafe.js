@@ -2,11 +2,13 @@
  * GET home page.
  */
 exports.index = function(req, res){
+    console.log(req.body);
     console.log(req.body.code);
-    if (req.body.code == ""){
+    if (req.body.code == undefined){
       res.render('cafe', { });
     }
     else {
+        alert("YES");
     var python = require('child_process').spawn(
     'python',
     // second argument is array of parameters, e.g.:                       
@@ -20,8 +22,8 @@ exports.index = function(req, res){
 
  // Splits the output into compiler errors, stdout, and stderr          
  output = output.split('~');
-
- res.render('cafe', { title: "Run", code: output[0], compileInfo: output[1], stdout: output[2], stderr: output[3] });
+ settings.callback(output);
+// res.render('cafe', { title: "Run", code: output[0], compileInfo: output[1], stdout: output[2], stderr: output[3] });
   });
     }
 };
