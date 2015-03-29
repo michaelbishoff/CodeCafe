@@ -109,14 +109,13 @@
 
 function run() {
 // Create the post object. The id is the unique key in the DB
-//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id")\
-};
+//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id") };
 
     // Setup the ajax request
     $.ajax({
         url: "cafe", // where we want to submit the form to
-        data: {},
-//        dataType: 'json',
+        data: {"code": $('#m').val()},
+        dataType: 'json',
         type: 'post',
         success: function(result) {
             if(!result) {

@@ -9,7 +9,7 @@ exports.post = function(req, res){
   var python = require('child_process').spawn(
     'python',
     // second argument is array of parameters, e.g.:                       
-     ["public/scripts/execute.py"]
+     ["public/scripts/execute.py", req.code]
      );
 
  var output = "";
@@ -20,7 +20,7 @@ exports.post = function(req, res){
  // Splits the output into compiler errors, stdout, and stderr          
  output = output.split('~');
 
- res.render('run', { title: "Run", code: output[0], compileInfo: output[1], stdout: output[2], stderr: output[3] });
+ res.render('cafe', { title: "Run", code: output[0], compileInfo: output[1], stdout: output[2], stderr: output[3] });
   });
 
 };
