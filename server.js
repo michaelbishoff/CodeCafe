@@ -32,7 +32,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/join', join.index);
-app.get('/cafe'), cafe.index);
+//app.get('/cafe'), cafe.index);
 
 /*
 io.on('connection', function(socket) {
