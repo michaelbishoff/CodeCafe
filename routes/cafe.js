@@ -2,7 +2,11 @@
  * GET home page.
  */
 exports.index = function(req, res){
-//  res.render('cafe', { });
+    console.log(req.body.code);
+    if (req.body.code == ""){
+      res.render('cafe', { });
+    }
+    else {
     var python = require('child_process').spawn(
     'python',
     // second argument is array of parameters, e.g.:                       
@@ -19,6 +23,7 @@ exports.index = function(req, res){
 
  res.render('cafe', { title: "Run", code: output[0], compileInfo: output[1], stdout: output[2], stderr: output[3] });
   });
+    }
 };
 
 exports.post = function(req, res){
