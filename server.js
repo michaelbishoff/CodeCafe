@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+var app = express();
 
 var express = require('express')
   , routes = require('./routes')
@@ -9,8 +10,6 @@ var express = require('express')
   , cafe = require('./routes/cafe')
   , http = require('http').Server(app)
   , path = require('path');
-
-var app = express();
 
 var io = require('socket.io')(http);
 
