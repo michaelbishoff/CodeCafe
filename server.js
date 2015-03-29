@@ -38,7 +38,7 @@ if ('development' == env) {
 app.get('/', routes.index);
 app.get('/join', join.index);
 app.get('/cafe', cafe.index);
-
+app.post('/cafe', cafe.post);
 
 io.on('connection', function(socket) {
     console.log('a user connected');
