@@ -21,14 +21,6 @@
                 window.location="xmlTable.html";
             }
         </script>
-        
-        <!--- xml adklfjafjasfkljasdf--->
-        <script>
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "spherengine.xml", false);
-        xmlhttp.send();
-        xmlDoc=xmlhttp.responseXML;
-        </script>
     </head>
     
     
