@@ -10,8 +10,8 @@ var express = require('express')
   , join = require('./routes/join')
   , cafe = require('./routes/cafe')
   , path = require('path')
-  , http = require('http').Server(app)
-  , io = require('socket.io')(http);
+  , http = require('http').Server(app);
+//  , io = require('socket.io')(http);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -67,8 +67,8 @@ io.on('connection', function(socket) {
 */
 
 
-http.createServer(app).listen(app.get('port'), function(){
+//http.createServer(app).listen(app.get('port'), function(){
 //require('http').createServer(app).listen(app.get('port'), function(){
-//http.listen(app.get('port'), function(){
+http.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
