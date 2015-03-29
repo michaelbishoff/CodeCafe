@@ -34,7 +34,7 @@ app.get('/', routes.index);
 app.get('/join', join.index);
 app.get('/cafe'), cafe.index);
 
-
+/*
 io.on('connection', function(socket) {
     console.log('a user connected');
     socket.on('disconnect', function() {
@@ -65,7 +65,7 @@ io.on('connection', function(socket) {
             io.emit('backSpace', msg);
     });
 });
-
+*/
 
 
 http.createServer(app).listen(app.get('port'), function(){
