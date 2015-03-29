@@ -1,117 +1,93 @@
-<html>
-    <head>
-        <title>Register</title>
-            <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
+<html lang="en" id="codecafe">
+<head>
+    <title> Register- CodeCafe </title>
+    <link rel="stylesheet" type="text/css" href="newstyle.css">
+    <script type="text/javascript">
         
-        <!---
-        <div id = "home-body">
-            <form method = "post" action = "index.html">
-            
-            <div class="user-name" id="wrap">
-                <div id="name">
-                    Name
-                </div>
-                <input type ="text" id="u_name">
-            </div>
-            
-            <div class="user-alias" id="wrap">
-                <div id="name">
-                    Username
-                </div>
-                <input type = "text" id="u_username">
-            </div>
-            
-                </div></form></div>
+    </script>
+        
+</head>
 
-        --->
-    
-    
-    
-    
-    <div class="center row">
-  <div class="section-container tabs" data-section="tabs">
-    <section class="active">
-      
-      <div class="content" data-section-content>
-        <p>
-          <div class="row">
-            <div class="large-12 columns">
-              <div class="signup-panel">
-                <p class="welcome">Hello, new user!</p>
-                <form>
-                  <div class="row collapse">
-                    <div class="small-2  columns">
-                      <span class="prefix"><i class="fi-torso"></i></span>
-                    </div>
-                    <div class="small-10  columns">
-                      <input type="text" placeholder="Full Name">
-                    </div>
-                  </div>
-                  <div class="row collapse">
-                    <div class="small-2 columns">
-                      <span class="prefix"><i class="fi-mail"></i></span>
-                    </div>
-                    <div class="small-10  columns">
-                      <input type="text" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="row collapse">
-                    <div class="small-2 columns ">
-                      <span class="prefix"><i class="fi-lock"></i></span>
-                    </div>
-                    <div class="small-10 columns ">
-                      <input type="text" placeholder="Password">
-                    </div>
-                  </div>
-                </form>
-                <a href="#" class="button ">Sign Up! </a>
-              </div>
-            </div>
-           </div></p>
-      </div>
-    </section>
-    
-<!---
-    <section>
-
-      <p class="title" data-section-title><a href="#">Sign In</a></p>
-      <div class="content" data-section-content>
-        <p>
-          <div class="row">
-            <div class="large-12 columns">
-              <div class="signup-panel">
-                <p class="welcome">Welcome back!</p>
-                <form>
-                  <div class="row collapse">
-                    <div class="small-2 columns">
-                      <span class="prefix"><i class="fi-mail"></i></span>
-                    </div>
-                    <div class="small-10  columns">
-                      <input type="text" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="row collapse">
-                    <div class="small-2 columns ">
-                      <span class="prefix"><i class="fi-lock"></i></span>
-                    </div>
-                    <div class="small-10 columns ">
-                      <input type="text" placeholder="Password">
-                    </div>
-                  </div>
-                </form>
-                <a href="#" class="button ">Sign Up! </a>
-              </div>
-            </div>
-           </div></p>
-      </div>
+    <body>
+        <h1  align="center">
+        Code Cafe- Registration
+        </h1>
 
 
-    </section>
---->
-  </div>
-<div>
     
-    </body>
+    <table class ="center row" align ="center">
+        <br>
+        
+    <tr align = "center">
+        <td><h5>Welcome to the Community! Please Fill out the below information to begin coding!</h5>
+        </td>
+    </tr>
+        
+    <tr align="center">
+        <td><form>
+            Name:<br>
+        <input type = "text" name = "Name">
+        <br>
+        </form></td>
+    </tr>
+        
+        
+ 
+    <tr align="center">
+        <td>
+            <form>
+                Username: <br>
+                <input type = "text" username = "UserName">
+                <br>
+            </form>
+        </td>
+    </tr>
+        
+        
+    <tr align="center">
+        <td>
+            <form>
+                Password: <br>
+                <input type = "text" pword = "password">
+                <br>
+            </form>
+        </td>
+    </tr>
+        
+    <tr align="center">
+        <td>
+            <form>
+                E-mail: <br>
+                <input type = "text" email = "email">
+                <br>
+            </form>
+        </td>
+    </tr>
+        
+    <tr align = "center">
+        <td>
+       <button class= "myLoginButton" type = "button" onclick = "pressed()"> Enter Coffee Shop! </button>
+        </td>
+    
+    </tr>
+    
+        
+</table>
+    <!---
+    <input type = "text"/>
+    <script type = "text/javascript" src = "script.js"></script>
+    <button type = "button" onclick = "pressed()"> Submit </button>
+    --->
+    
+   <!--
+    <img src="http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" />
+		<img src="http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" />-->
+
+
+
+
+
+
+
+
 </html>
