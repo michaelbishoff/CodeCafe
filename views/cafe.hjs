@@ -109,7 +109,7 @@
 
 function run() {
 // Create the post object. The id is the unique key in the DB
-//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id")\};
+//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id") };
 
     // Setup the ajax request
     $.ajax({
