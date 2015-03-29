@@ -7,7 +7,7 @@ var express = require('express')
   , routes = require('./routes')
   , join = require('./routes/join')
   , cafe = require('./routes/cafe')
-  , http = require('http')
+  , http = require('http').Server(app)
   , path = require('path');
 
 var app = express();
@@ -68,6 +68,7 @@ io.on('connection', function(socket) {
 */
 
 
-http.createServer(app).listen(app.get('port'), function(){
+//http.createServer(app).listen(app.get('port'), function(){
+http.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
