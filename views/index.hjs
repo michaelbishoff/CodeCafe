@@ -10,7 +10,7 @@
                 window.location="registration.html";   
             }
             function compile() {
-                window.location="izzy.html";   
+                window.location="/cafe";   
             }
             function pythonclick() {
                 window.location="xmlTable.html";
