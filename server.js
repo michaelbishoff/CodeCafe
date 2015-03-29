@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , join = require('./routes/join')
+  , cafe = require('./routes/cafe')
   , http = require('http')
   , path = require('path');
 
@@ -62,7 +63,7 @@ io.on('connection', function(socket) {
     socket.on('backSpace', function(msg) {
             console.log('backspace hit!!');
             io.emit('backSpace', msg);
-});
+    });
 });
 
 
