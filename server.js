@@ -5,8 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , registration = require('./routes/registration')
-  , user = require('./routes/user')
+  , join = require('./routes/join')
   , http = require('http')
   , path = require('path');
 
@@ -29,8 +28,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/registration', registration.registration);
-//app.get('/users', user.list);
+app.get('/join', join.index);
 
 //module.exports = app;
 
