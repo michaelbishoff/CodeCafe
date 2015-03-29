@@ -1,9 +1,129 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet', href='/stylesheets/style.css' />
-  <body>
-    <h1>{{ title }}</h1>
-  </body>
+<html lang="en" id="codecafe">
+    <head>
+        <title> CodeCafe </title>
+        
+        <link rel="stylesheet" type="text/css" href="/stylesheets/mainPage.css">
+        <script type="text/javascript">
+            function javaclick() {
+                window.location="http://www.google.com";
+            }
+            
+            function registration() {
+                window.location="registration.html";   
+            }
+            
+            <!--- text area for coding --->
+            function compile() {
+                window.location="izzy.html";   
+            }
+            function pythonclick() {
+               
+                window.location="xmlTable.html";
+            }
+        </script>
+        
+        <!--- xml adklfjafjasfkljasdf--->
+        <script>
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "spherengine.xml", false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;
+        </script>
+    </head>
+    
+    
+    <body>
+        <h1>
+        Code Cafe
+        </h1>
+        
+<!--- XML SCRIPTTTT!!!!!!!!! --->
+
+<!-------------------------------------------------------------------------------->
+        <!--- login forms "login" class --->
+        <form name="login">
+            <tr>
+            Username<input type="text" name="userid"/>
+            </tr>
+            
+            <tr>
+            Password<input type="password" name="pswrd"/>
+            </tr>
+            
+            <tr>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+            </tr>
+              
+        </form>
+        <!--- login forms end --->
+        
+        <table border="2" class="tableCaption" width="675">
+        Select a language!
+        </table>
+        
+        <!--- House Select table --->
+        <table border="1" style="width:50%" class="houseSelect">
+            <!--- Row 1 BEGIN --->
+            <tr>
+                <td>
+                    <input type="button" value="Java" style="width:100%" onclick="compile()" />
+                        
+                        <!--- Button Information --->
+                        <table border="2">
+                        <tr>
+                            <!--- User population --->
+                            <td>
+                            User Population
+                            </td>
+                            
+                            <!--- Star Users population --->
+                            <td>
+                            Star Users
+                            </td>
+                            
+                            <!--- Room population --->
+                            <td>
+                            Rooms Open
+                            </td>
+                        </tr>
+                        </table>
+                    <!--- end of java button --->    
+                    
+                </td>
+            </tr>
+            <!--- Row 1 END --->
+            <!--- Row 2 BEGIN --->
+            <tr>
+                <td>
+                    <input type="button" value="Python" style="width:100%" onclick="pythonclick()"/>
+                    <!--- Button Information --->
+                        <table border="2">
+                        <tr>
+                            <!--- User population --->
+                            <td>
+                            User Population
+                            </td>
+                            
+                            <!--- Star Users population --->
+                            <td>
+                            Star Users
+                            </td>
+                            
+                            <!--- Room population --->
+                            <td>
+                            Rooms Open
+                            </td>
+                        </tr>
+                        </table>    
+                </td>
+            </tr>
+            <!--- Row 2 END --->
+            </table>
+        
+        
+        
+
+        <!--- House Select table END --->
+    </body>
 </html>

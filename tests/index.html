@@ -2,75 +2,63 @@
 <html lang="en" id="codecafe">
     <head> 
         <title> CodeCafe </title>
-        
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="newstyle.css">
         <script type="text/javascript">
             function javaclick() {
                 window.location="http://www.google.com";
             }
-            
             function registration() {
                 window.location="registration.html";   
             }
-            
-            
             function compile() {
                 window.location="izzy.html";   
             }
             function pythonclick() {
-               
                 window.location="xmlTable.html";
             }
         </script>
         
-        
-        <script>
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "spherengine.xml", false);
-        xmlhttp.send();
-        xmlDoc=xmlhttp.responseXML;
-        </script>
-    </head>
-    
-    
+        </head>
     <body>
         <h1>
         Code Cafe
         </h1>
         
-
         <form name="login">
-            <tr style="width:50%">
-            Username<input type="text" name="userid"/>
-            </tr>
-            
-            <tr>
-            Password<input type="password" name="pswrd"/>
-            </tr>
-            
-            <tr>
-            <a href="#" class="button tiny" onclick="check(this.form)"             >Login</a>
-            <a href="#" class="button tiny" value="Cancel" type="reset"              >Cancel</a>
-            </tr>
-        
-              
+            <table>
+                <tr>
+                <form>
+                    Login:<br>
+                    <input type="text" name="login">
+                    <br>
+                </form>
+                </tr>
+                
+                <tr>
+                <form>
+                    Password:<br>
+                    <input type="text" name="password">
+                    <br>
+                </form>
+                </tr>
+            </table>  
         </form>
-        
+    
         
         <table border="2" class="tableCaption" width="675">
         Select a language!
         </table>
         
         
-        <table border="1" style="height:20px;width:50%" class="houseSelect">
+        <table border="0" style="height:20px;width:50%"                         class="houseSelect">
            
             <tr>
                 <td>
                     
-                    <a href="#" class="button round" onclick="compile()">Python</a>
+                    <a href="#" class="myButton" onclick="compile()">Python</a>
                         
                         
-                        <table border="1">
+                        <table class="houseInfo" border="1">
                         <tr>
                             
                             <td>
@@ -95,7 +83,7 @@
             
             <tr>
                 <td>
-                    <a href="#" class="button round" onclick="page2()">Java</a>
+                    <a href="#" class="myButton" onclick="page2()">Java</a>
                     
                         <table border="2">
                         <tr>
@@ -119,10 +107,6 @@
             </tr>
             
             </table> 
-        
-        
-        
-
-        
+  
     </body>
 </html>
