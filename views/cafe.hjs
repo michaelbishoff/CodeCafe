@@ -17,10 +17,10 @@
 	</table>
 	
 	</head>
-    <input type="button" value="save as text file" onclick="runPy();"/>
+    <input type="button" value="Compile Code" onclick="run();"/>
 	
 	<textarea id="m" class="one" rows="10" cols="50"></textarea>
-	<textarea id="n" class="two" rows="10" co	ls="50"></textarea>
+	<textarea id="n" class="two" rows="10" co	ls="50">{{ compileInfo }}{{ stdout }}{{ stderr }}</textarea>
 	
 	<body>
 	
@@ -105,6 +105,26 @@
 
         }
     };
+}
+
+function run() {
+// Create the post object. The id is the unique key in the DB
+//    var data = "";//{"votes":newVotes, "resultId":$(this).parent().attr("id")\
+};
+
+    // Setup the ajax request
+    $.ajax({
+        url: "cafe", // where we want to submit the form to
+        data: {},
+//        dataType: 'json',
+        type: 'post',
+        success: function(result) {
+            if(!result) {
+                console.error("Failed ajax request");
+            }
+        }
+    });
+
 }
 
 
