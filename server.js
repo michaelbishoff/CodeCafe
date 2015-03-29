@@ -68,6 +68,7 @@ io.on('connection', function(socket) {
 
 
 //http.createServer(app).listen(app.get('port'), function(){
-http.listen(app.get('port'), function(){
+require('http').createServer(app).listen(app.get('port'), function(){
+//http.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
