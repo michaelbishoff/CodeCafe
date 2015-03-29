@@ -5,7 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , registration = require('./routes/registration')
+//  , registration = require('./routes/registration')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -29,7 +29,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-//app.get('/registration', registration);
+app.get('/registration', routes.registration);
 //app.get('/users', user.list);
 
 //module.exports = app;
