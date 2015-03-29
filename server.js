@@ -50,7 +50,7 @@ io.on('connection', function(socket) {
 
     // picks up user client sent message to server and prints to console    
     socket.on('chat message', function(msg) {
-            console.log('message: '+msg);
+            //console.log('message: '+msg);
     });
 
     // emits the message to client side                                     
@@ -60,7 +60,7 @@ io.on('connection', function(socket) {
 
     // listens to keypress from client and prints to server console         
     socket.on('keyPress', function(msg){
-            console.log('key pressed: '+msg);
+            //console.log('key pressed: '+msg);
             io.emit('keyPress', msg)
     });
 
@@ -68,7 +68,7 @@ io.on('connection', function(socket) {
 
     // listens to backspace keypress from client                            
     socket.on('backSpace', function(msg) {
-            console.log('backspace hit!!');
+            //console.log('backspace hit!!');
             io.emit('backSpace', msg);
     });
 });
