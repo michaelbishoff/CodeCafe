@@ -11,7 +11,7 @@ var express = require('express')
   , cafe = require('./routes/cafe')
   , path = require('path')
   , http = require('http').Server(app);
-//  , io = require('socket.io')(http);
+  , io = require('socket.io')(http);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
