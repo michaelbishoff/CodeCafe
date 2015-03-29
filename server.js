@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -10,7 +9,7 @@ var express = require('express')
   , join = require('./routes/join')
   , cafe = require('./routes/cafe')
   , path = require('path')
-  , http = require('http').Server(app);
+  , http = require('http').Server(app)
   , io = require('socket.io')(http);
 
 app.configure(function(){
@@ -28,12 +27,19 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
+/*
+var env = process.env.NODE_ENV || 'development';
+if ('development' == env) {
+    app.use(express.errorHandler());
+}
+*/
+
 
 app.get('/', routes.index);
 app.get('/join', join.index);
-//app.get('/cafe'), cafe.index);
+app.get('/cafe', cafe.index);
 
-/*
+
 io.on('connection', function(socket) {
     console.log('a user connected');
     socket.on('disconnect', function() {
@@ -64,7 +70,7 @@ io.on('connection', function(socket) {
             io.emit('backSpace', msg);
     });
 });
-*/
+
 
 
 //http.createServer(app).listen(app.get('port'), function(){
