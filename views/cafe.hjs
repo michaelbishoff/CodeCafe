@@ -116,7 +116,7 @@ function run() {
         url: "cafe", // where we want to submit the form to
         data: {"code": $('#m').val()},
         dataType: 'json',
-        type: 'post',
+        type: 'get',
         success: function(result) {
             if(!result) {
                 console.error("Failed ajax request");
