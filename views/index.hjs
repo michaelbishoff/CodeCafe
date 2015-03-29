@@ -1,7 +1,7 @@
 <html lang="en" id="codecafe">
     <head> 
         <title> CodeCafe </title>
-        <link rel="stylesheet" type="text/css" href="/public/stylesheets/mainPage.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/mainPage.css">
 <!--        <link rel="stylesheet" type="text/css" href="../tests/newstyle.css"> -->
         <script type="text/javascript">
             function javaclick() {
