@@ -2,6 +2,6 @@
  * GET registration page.
  */
 
-exports.join = function(req, res){
+exports.index = function(req, res){
   res.render('join', { });
 };
