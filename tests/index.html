@@ -1,5 +1,6 @@
+
 <html lang="en" id="codecafe">
-    <head>
+    <head> 
         <title> CodeCafe </title>
         
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,7 +13,7 @@
                 window.location="registration.html";   
             }
             
-            <!--- text area for coding --->
+            
             function compile() {
                 window.location="izzy.html";   
             }
@@ -22,7 +23,7 @@
             }
         </script>
         
-        <!--- xml adklfjafjasfkljasdf--->
+        
         <script>
         xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", "spherengine.xml", false);
@@ -37,12 +38,9 @@
         Code Cafe
         </h1>
         
-<!--- XML SCRIPTTTT!!!!!!!!! --->
 
-<!-------------------------------------------------------------------------------->
-        <!--- login forms "login" class --->
         <form name="login">
-            <tr>
+            <tr style="width:50%">
             Username<input type="text" name="userid"/>
             </tr>
             
@@ -51,66 +49,67 @@
             </tr>
             
             <tr>
-            <input type="button" onclick="check(this.form)" value="Login"/>
-            <input type="reset" value="Cancel"/>
+            <a href="#" class="button tiny" onclick="check(this.form)"             >Login</a>
+            <a href="#" class="button tiny" value="Cancel" type="reset"              >Cancel</a>
             </tr>
+        
               
         </form>
-        <!--- login forms end --->
+        
         
         <table border="2" class="tableCaption" width="675">
         Select a language!
         </table>
         
-        <!--- House Select table --->
-        <table border="1" style="width:50%" class="houseSelect">
-            <!--- Row 1 BEGIN --->
+        
+        <table border="1" style="height:20px;width:50%" class="houseSelect">
+           
             <tr>
                 <td>
-                    <input type="button" value="Java" style="width:100%" onclick="compile()" />
+                    
+                    <a href="#" class="button round" onclick="compile()">Python</a>
                         
-                        <!--- Button Information --->
-                        <table border="2">
+                        
+                        <table border="1">
                         <tr>
-                            <!--- User population --->
+                            
                             <td>
                             User Population
                             </td>
                             
-                            <!--- Star Users population --->
+                            
                             <td>
                             Star Users
                             </td>
                             
-                            <!--- Room population --->
+                            
                             <td>
                             Rooms Open
                             </td>
                         </tr>
                         </table>
-                    <!--- end of java button --->    
+                    
                     
                 </td>
             </tr>
-            <!--- Row 1 END --->
-            <!--- Row 2 BEGIN --->
+            
             <tr>
                 <td>
-                    <input type="button" value="Python" style="width:100%" onclick="pythonclick()"/>
-                    <!--- Button Information --->
+                    <a href="#" class="button round" onclick="page2()">Java</a>
+                    
                         <table border="2">
                         <tr>
-                            <!--- User population --->
+                            
                             <td>
                             User Population
                             </td>
                             
-                            <!--- Star Users population --->
+                            
                             <td>
                             Star Users
                             </td>
                             
-                            <!--- Room population --->
+                            
                             <td>
                             Rooms Open
                             </td>
@@ -118,12 +117,12 @@
                         </table>    
                 </td>
             </tr>
-            <!--- Row 2 END --->
-            </table>
+            
+            </table> 
         
         
         
 
-        <!--- House Select table END --->
+        
     </body>
 </html>
