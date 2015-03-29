@@ -4,7 +4,7 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
+  , routes = require('./routes/index')
   , registration = require('./routes/registration');
   , user = require('./routes/user')
   , http = require('http')
