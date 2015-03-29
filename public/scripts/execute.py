@@ -8,6 +8,7 @@ This script shows how to use ideone api.
 
 from SOAPpy import WSDL
 from time import sleep
+import sys
 
 PYTHON_2 = 4
 
@@ -17,9 +18,11 @@ wsdlObject = WSDL.Proxy('http://ideone.com/api/1/service.wsdl')
 
 # calling test method
 #response = wsdlObject.testFunction('celestinew', 'Underdogs!')
-code = 'print "Hello World!"\nfor i in range(10):\n\tprint "I see"\n'
-code2 = 'num = 0\nwhile True:\n\tprint num\n\tnum = num + 1\n'
-code3 = 'printf("this is c code");'
+#code = 'print "Hello World!"\nfor i in range(10):\n\tprint "I see"\n'
+#code2 = 'num = 0\nwhile True:\n\tprint num\n\tnum = num + 1\n'
+#code3 = 'printf("this is c code");'
+
+code = sys.argv[2]
 
 response = wsdlObject.createSubmission('celestinew', 'Underdogs!', code, PYTHON_2, '', 1, 0)
 
