@@ -32,7 +32,7 @@ app.use('/', routes);
 //app.get('/registration', registration);
 //app.get('/users', user.list);
 
-module.exports = app;
+//module.exports = app;
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
