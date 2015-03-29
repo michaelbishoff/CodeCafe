@@ -28,7 +28,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get('/', routes);
 //app.get('/edwin', routes.edwin);
 //app.get('/registration', routes.registration);
 //app.get('/users', user.list);
