@@ -10,7 +10,8 @@ exports.index = function(req, res){
 /*
  * GET Edwin's page.
  */
-
+/*
 exports.edwin = function(req, res){
     res.render('edwin', { });
 };
+*/
