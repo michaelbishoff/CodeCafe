@@ -28,7 +28,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.use('/', routes);
+app.get('/', routes);
 //app.get('/registration', registration);
 //app.get('/users', user.list);
 
