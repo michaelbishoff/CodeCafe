@@ -2,16 +2,16 @@
 /**
  * Module dependencies.
  */
-var app = express();
+//var app = express();
+var app = require('express')();
 
 var express = require('express')
   , routes = require('./routes')
   , join = require('./routes/join')
   , cafe = require('./routes/cafe')
+  , path = require('path')
   , http = require('http').Server(app)
-  , path = require('path');
-
-var io = require('socket.io')(http);
+  , io = require('socket.io')(http);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
