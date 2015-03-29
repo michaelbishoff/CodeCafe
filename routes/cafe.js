@@ -9,7 +9,7 @@ exports.post = function(req, res){
   var python = require('child_process').spawn(
     'python',
     // second argument is array of parameters, e.g.:                       
-     ["public/scripts/execute.py", req.code]
+     ["public/scripts/execute.py", req.body.code]
      );
 
  var output = "";
