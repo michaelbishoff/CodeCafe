@@ -11,6 +11,8 @@ var express = require('express')
 
 var app = express();
 
+var io = require('socket.io')(http);
+
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -29,8 +31,41 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/join', join.index);
+app.get('/cafe'), cafe.index);
 
-//module.exports = app;
+
+io.on('connection', function(socket) {
+    console.log('a user connected');
+    socket.on('disconnect', function() {
+            console.log('a user has disconnected');
+    });
+
+    // picks up user client sent message to server and prints to console    
+    socket.on('chat message', function(msg) {
+            console.log('message: '+msg);
+    });
+
+    // emits the message to client side                                     
+    socket.on('chat message', function(msg){
+            io.emit('chat message', msg);
+    });
+
+    // listens to keypress from client and prints to server console         
+    socket.on('keyPress', function(msg){
+            console.log('key pressed: '+msg);
+            io.emit('keyPress', msg)
+    });
+
+
+
+    // listens to backspace keypress from client                            
+    socket.on('backSpace', function(msg) {
+            console.log('backspace hit!!');
+            io.emit('backSpace', msg);
+});
+});
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
